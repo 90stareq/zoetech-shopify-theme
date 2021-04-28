@@ -1,0 +1,261 @@
+<div class="container drugfree-section">
+        <h2 class="drugfree-title">
+            {{ section.settings.drugfree_title }}
+        </h2>
+
+    <div class="drug-slider">
+        <div class="row drug-slider-items">
+            {%- for block in section.blocks -%}
+                {%- assign block_image = block.settings.image -%}
+                {% if block_image %}
+                    <div class="col-md-6 col-sm-12 drug-slider-item">
+                        <img src="
+                            {% if block_image == blank %}{{ 'product1.jpg' | asset_url }}
+                            {% else %}
+                            {{ block_image | img_url: '300x300' }}{% endif %}" alt="" class="drug-slider-item-img">
+        
+                        <div class="drug-slider-item-info">
+                            <h4 class="drug-slider-item-title">
+                                {% if block.settings.slide_title %}
+                                    {{ block.settings.slide_title }}
+                                    {% else %}
+                                    ZT_TENS-Device
+                                {% endif %}
+                            </h4>
+                            {% if block.settings.enable_review %}
+                                <div class="review-area">
+                                    <img src="{{ 'star.png' | asset_url }}" />
+                                    <img src="{{ 'star.png' | asset_url }}" />
+                                    <img src="{{ 'star.png' | asset_url }}" />
+                                    <img src="{{ 'star.png' | asset_url }}" />
+                                    <img src="{{ 'star.png' | asset_url }}" />
+                                </div>
+                            {% endif %}
+                            <a href="{% if block.settings.button_link %}{{ block.settings.button_link }}{% else %}#{% endif %}" class="drug-slider-item-button">
+                                {% if block.settings.button_label == blank %}
+                                    VIEW PRODUCT
+                                    {% else %}
+                                    {{ block.settings.button_label }}
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-md-6 col-sm-12 drug-slider-item">
+                        <img src="{{ 'product1.jpg' | asset_url }}" alt="" class="drug-slider-item-img">
+        
+                        <div class="drug-slider-item-info">
+                            <h4 class="drug-slider-item-title">
+                                ZT_TENS-Device
+                            </h4>
+                            <div class="review-area">
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                            </div>
+                            <a href="#" class="drug-slider-item-button">
+                                VIEW PRODUCT
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 drug-slider-item">
+                        <img src="https://images.unsplash.com/photo-1619490742517-3807961a61ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=397&q=80" alt="" class="drug-slider-item-img">
+        
+                        <div class="drug-slider-item-info">
+                            <h4 class="drug-slider-item-title">
+                                ZT_TENS-Device
+                            </h4>
+                            <div class="review-area">
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                            </div>
+                            <a href="#" class="drug-slider-item-button">
+                                VIEW PRODUCT
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 drug-slider-item">
+                        <img src="{{ 'product2.jpg' | asset_url }}" alt="" class="drug-slider-item-img">
+        
+                        <div class="drug-slider-item-info">
+                            <h4 class="drug-slider-item-title">
+                                ZT_TENS-Device
+                            </h4>
+                            <div class="review-area">
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                                <img src="{{ 'star.png' | asset_url }}" />
+                            </div>
+                            <a href="#" class="drug-slider-item-button">
+                                VIEW PRODUCT
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            {%- endfor -%}
+            
+        </div>
+    </div>
+
+    <div class="row drugfree-features">
+        <div class="col-md-3 col-sm-6 drugfree-features-item">
+            <img src="{{ 'features-item1.png' | asset_url }}" alt="" class="drugfree-features-item-img">
+            <p class="drugfree-features-item-text">
+                Educating & empowering women for a happier, healthier life
+            </p>
+        </div>
+        <div class="col-md-3 col-sm-6 drugfree-features-item">
+            <img src="{{ 'features-item2.png' | asset_url }}" alt="" class="drugfree-features-item-img">
+            <p class="drugfree-features-item-text">
+                Educating & empowering women for a happier, healthier life
+            </p>
+        </div>
+        <div class="col-md-3 col-sm-6 drugfree-features-item">
+            <img src="{{ 'features-item3.png' | asset_url }}" alt="" class="drugfree-features-item-img">
+            <p class="drugfree-features-item-text">
+                Educating & empowering women for a happier, healthier life
+            </p>
+        </div>
+        <div class="col-md-3 col-sm-6 drugfree-features-item">
+            <img src="{{ 'features-item4.png' | asset_url }}" alt="" class="drugfree-features-item-img">
+            <p class="drugfree-features-item-text">
+                Educating & empowering women for a happier, healthier life
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Drugfree Slideshow"
+  },
+  "max_blocks": 6,
+  "settings": [
+      {
+          "type": "text",
+          "label": "Section Title",
+          "id": "drugfree_title",
+          "default": "DRUG-FREE SOLUTIONS TO SOOTHE PAIN AND ELEVATE YOUR LIFE"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": {
+        "en": "Image slide"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "en": "Image"
+          }
+        },
+        {
+          "type": "text",
+          "id": "slide_title",
+          "label": {
+            "en": "Title"
+          },
+          "default": {
+            "en": "Title"
+          }
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_review",
+            "label": {
+                "en": "Show review"
+              },
+            "default": true
+          },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": {
+            "en": "Button label"
+          },
+          "default": "View Product"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": {
+            "en": "Button link"
+          }
+        }
+      ]
+    },
+    {
+        "type": "featured",
+        "name": {
+            "en": "Features"
+        },
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "featured_img",
+                "label": {
+                    "en": "Featured Image"
+                }
+            },
+            {
+                "type": "richtext",
+                "id": "featured_img_desc",
+                "label": {
+                    "en": "Description"
+                }
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Drugfree Slideshow"
+      },
+      "category": {
+        "cs": "Obrázek",
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pl": "Obraz",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "tr": "Görsel",
+        "vi": "Hình ảnh",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
